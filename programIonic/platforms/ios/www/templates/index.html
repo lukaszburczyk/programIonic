@@ -1,0 +1,60 @@
+﻿<ion-view view-title="Strona startowa">
+    <ion-content ng-controller="wiadomosc">
+        <!--<br /><br />-->
+
+        <div class="row">
+            <div class="col">
+                <button class="button button-block button-royal icon-left ion-home" ng-click="witaj='Wcisnąłes dom'">Dom</button>
+            </div>
+            <div class="col">
+                <button class="button button-block button-balanced icon-left ion-edit" ng-click="witaj='Wcisnąłeś edycja'">Edycja</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button class="button button-block button-calm icon-left ion-ios-copy-outline" ng-click="witaj='Wcisnąłeś kopiuj'">Kopiuj</button>
+            </div>
+            <div class="col">
+                <button class="button button-block button-assertive icon-left ion-search" ng-click="witaj='Wcisnąłeś szukaj'">Szukaj</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button class="button button-block button-calm icon-left ion-ios-list-outline" ng-click="show = !show">Wyświetl listę</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" ng-controller="lokalizacja">
+                <button class="button button-block button-calm icon-left ion-ios-list-outline" ng-click="go('/app/lista')">Wyświetl listę w nowej stronie</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" ng-controller="lokalizacja">
+                <button class="button button-block button-calm icon-left ion-ios-list-outline" ng-click="go('/app/listaGit')">Lista Github</button>
+            </div>
+        </div>
+
+        <!--<br /><br />-->
+
+        <h2>{{witaj}}</h2>
+
+        <!--<br /><br />-->
+
+            <label class="item item-input item-select">
+                <a class="input-label">
+                    Wybierz rodzaj sortowania
+                </a>
+                <select ng-model="sortOrder">
+                    <option value="+name">Nazwa Od A</option>
+                    <option value="-name">Nazwa Od Z</option>
+                </select>
+            </label>
+
+            <ion-list ng-controller="lista" ng-show="show">
+                <ion-item ng-repeat="element in elementy | orderBy:sortOrder">
+                    {{element.name}}
+                </ion-item>
+            </ion-list>
+
+</ion-content>
+</ion-view>

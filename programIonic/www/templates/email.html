@@ -1,0 +1,22 @@
+﻿<ion-view view-title="Wyślij E-mail">
+    <ion-content ng-controller="wyslijEmail">
+        <div class="list">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Imię</span>
+                <input type="text" placeholder="Imie" ng-model="imie">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Nazwisko</span>
+                <input type="text" placeholder="Nazwisko" ng-model="nazwisko">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">E-mail</span>
+                <input type="text" placeholder="mail@gmail.com" ng-model="adresEmail">
+            </label>
+            <div class="button-bar">
+                <button class="button button-small button-assertive icon-left ion-ios-email-outline" ng-click="wyslij()">Wyślij e-mail</button>
+            </div>
+        </div>
+        <h2>{{sukcess}}</h2>
+    </ion-content>
+</ion-view>
