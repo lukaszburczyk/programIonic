@@ -1,0 +1,32 @@
+﻿<ion-view view-title="{{url2}}">
+    <ion-content ng-controller="szczeP">
+    </ion-content>
+        <ion-content>
+            <div class="row">
+                <div class="col col-75 item item-divider">
+                    Nazwa Projektu
+                </div>
+                <div class="col col-25 item item-divider">
+                    Język
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-75 item item-text-wrap">
+                    {{projektt.name}}
+                </div>
+                <div class="col col-25 item item-text-wrap">
+                    {{projektt.language}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="card item item-text-wrap" >
+                    {{projektt.description}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-100 item">
+                    <a class="button button-block button-assertive icon-left ion-android-download" href="https://github.com/{{name}}/{{projektt.name}}/archive/master.zip" download>Pobierz</a>
+                </div>
+            </div>
+        </ion-content>
+</ion-view>

@@ -83,6 +83,7 @@ ext {
 
     // Plugin gradle extensions can append to this to have code run at the end.
     cdvPluginPostBuildExtras = []
+    com.android.build.gradle.overridePathCheck=true
 }
 
 // PLUGIN GRADLE EXTENSIONS START

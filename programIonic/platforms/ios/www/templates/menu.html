@@ -2,7 +2,17 @@
         <ion-nav-back-button>
         </ion-nav-back-button>
     </ion-nav-bar>
+
     <ion-nav-view name="menuContent"></ion-nav-view>
+
+<div class="tabs tabs-icon-only tabs-positive">
+    <a class="tab-item" href="index.html">
+        <i class="icon ion-home"></i>
+    </a>
+    <a class="tab-item" ng-controller="lokalizacja">
+        <i class="icon ion-search" ng-click="go('/app/listaGit')"></i>
+    </a>
+</div>
 <!--<div class="bar bar-footer bar-balanced">
     <div class="title">Footer</div>
 </div>-->

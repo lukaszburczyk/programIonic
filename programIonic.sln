@@ -9,6 +9,7 @@ Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Android = Debug|Android
 		Debug|iOS = Debug|iOS
+		Debug|Windows Phone = Debug|Windows Phone
 		Debug|Windows Phone (Universal) = Debug|Windows Phone (Universal)
 		Debug|Windows Phone 8 = Debug|Windows Phone 8
 		Debug|Windows-AnyCPU = Debug|Windows-AnyCPU
@@ -17,6 +18,7 @@ Global
 		Debug|Windows-x86 = Debug|Windows-x86
 		Release|Android = Release|Android
 		Release|iOS = Release|iOS
+		Release|Windows Phone = Release|Windows Phone
 		Release|Windows Phone (Universal) = Release|Windows Phone (Universal)
 		Release|Windows Phone 8 = Release|Windows Phone 8
 		Release|Windows-AnyCPU = Release|Windows-AnyCPU
@@ -31,6 +33,9 @@ Global
 		{D0FA6856-33C9-43C5-B6D6-D663AAE910EC}.Debug|iOS.ActiveCfg = Debug|iOS
 		{D0FA6856-33C9-43C5-B6D6-D663AAE910EC}.Debug|iOS.Build.0 = Debug|iOS
 		{D0FA6856-33C9-43C5-B6D6-D663AAE910EC}.Debug|iOS.Deploy.0 = Debug|iOS
+		{D0FA6856-33C9-43C5-B6D6-D663AAE910EC}.Debug|Windows Phone.ActiveCfg = Debug|Android
+		{D0FA6856-33C9-43C5-B6D6-D663AAE910EC}.Debug|Windows Phone.Build.0 = Debug|Android
+		{D0FA6856-33C9-43C5-B6D6-D663AAE910EC}.Debug|Windows Phone.Deploy.0 = Debug|Android
 		{D0FA6856-33C9-43C5-B6D6-D663AAE910EC}.Debug|Windows Phone (Universal).ActiveCfg = Debug|Windows Phone (Universal)
 		{D0FA6856-33C9-43C5-B6D6-D663AAE910EC}.Debug|Windows Phone (Universal).Build.0 = Debug|Windows Phone (Universal)
 		{D0FA6856-33C9-43C5-B6D6-D663AAE910EC}.Debug|Windows Phone (Universal).Deploy.0 = Debug|Windows Phone (Universal)
@@ -55,6 +60,9 @@ Global
 		{D0FA6856-33C9-43C5-B6D6-D663AAE910EC}.Release|iOS.ActiveCfg = Release|iOS
 		{D0FA6856-33C9-43C5-B6D6-D663AAE910EC}.Release|iOS.Build.0 = Release|iOS
 		{D0FA6856-33C9-43C5-B6D6-D663AAE910EC}.Release|iOS.Deploy.0 = Release|iOS
+		{D0FA6856-33C9-43C5-B6D6-D663AAE910EC}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+		{D0FA6856-33C9-43C5-B6D6-D663AAE910EC}.Release|Windows Phone.Build.0 = Release|Windows Phone
+		{D0FA6856-33C9-43C5-B6D6-D663AAE910EC}.Release|Windows Phone.Deploy.0 = Release|Windows Phone
 		{D0FA6856-33C9-43C5-B6D6-D663AAE910EC}.Release|Windows Phone (Universal).ActiveCfg = Release|Windows Phone (Universal)
 		{D0FA6856-33C9-43C5-B6D6-D663AAE910EC}.Release|Windows Phone (Universal).Build.0 = Release|Windows Phone (Universal)
 		{D0FA6856-33C9-43C5-B6D6-D663AAE910EC}.Release|Windows Phone (Universal).Deploy.0 = Release|Windows Phone (Universal)

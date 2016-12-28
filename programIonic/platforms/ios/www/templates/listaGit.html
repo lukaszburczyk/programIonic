@@ -1,6 +1,7 @@
 ﻿<ion-view view-title="Lista Github">
-    <ion-content ng-controller="listaGit">
+    <ion-content ng-controller="listaGit" ng-init="start()">
         <h4>Wyszukaj użytkownika</h4>
+
         <div class="list">
 
             <div class="item item-input-inset">
@@ -8,21 +9,17 @@
                     <input type="text" placeholder="Nazwa" ng-model="username">
                 </label>
                 <button class="button button-small button-assertive icon-left ion-search" ng-click="search(username)">Szukaj</button>
+                <button class="button button-small button-assertive icon-left ion-ios-list-outline" ng-click="odswierz()">Lista</button>
+            </div>
+            <div class="button-bar" ng-hide="repos">
+                <button class="button button-small button-assertive icon-left ion-arrow-left-c" ng-click="listaP()">Poprzedni</button>
+                <button class="button button-small button-assertive icon-right ion-arrow-right-c" ng-click="listaN()">Następni</button>
+            </div>
+            <div class="button-bar" ng-hide="!repos" ng-controller="lokalizacja">
+                <button class="button button-small button-assertive icon-left ion-ios-email-outline" ng-click="go('/app/email')">Wyślij e-mail</button>
             </div>
 
         </div>
-
-        <!--<div>
-            <p>Imie i nazwisko :{{user.name}}</p>
-            <p>Email : {{user.email}}</p>
-            <p>Adress Bloga : {{user.blog}}</p>
-            <p>Utworzony : {{user.created_at}}</p>
-            <p>Awatar : </p>
-            <p>
-                <img ng-src="{{user.avatar_url}}"
-                     title="{{user.name}}" />
-            </p>
-        </div>-->
 
         <div>
             <a class="item item-avatar" ng-hide="!repos" href="{{user.blog}}">
@@ -32,20 +29,7 @@
                 <p>Adress Bloga : {{user.blog}}</p>
             </a>
         </div>
-        <!--<div class="list list-inset">
-            <label class="item item-input">
-                <span class="input-label">Nazwa</span>
-                <input type="text" ng-model="username">
-            </label>
-            <button class="button button-block button-assertive icon-left ion-search" ng-click="search(username)">Szukaj</button>
-        </div>-->
 
-        <!--<div>
-            <form name="wyszukiwarka">
-                <input type="search" placeholder="Nazwa" ng-model="username" />
-                <button class="button button-block button-assertive icon-left ion-search" ng-click="search(username)">Szukaj</button>
-            </form>
-        </div>-->
         <label class="item item-input item-select" ng-hide="!repos">
             <a class="input-label">
                 Wybierz rodzaj sortowania
@@ -56,21 +40,37 @@
                 <option value="-stargazers_count">Gwiazdy</option>
             </select>
          </label>
-            <table class="list list-inset" ng-hide="!repos">
-                <thead>
-                    <tr>
-                        <th>Nazwa</th>
-                        <th>Język</th>
-                        <th>Gwiazdy</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr ng-repeat="rep in repos | orderBy:sortOrder">
-                        <td>{{rep.name}}</td>
-                        <td>{{rep.language}}</td>
-                        <td>{{rep.stargazers_count | number}}</td> <!--zastosowanie formatowania-->
-                    </tr>
-                </tbody>
-            </table>
+        
+        <div class="row "ng-hide="!repos">
+            <div class="col col-50 item item-divider">
+                Nazwa
+            </div>
+            <div class="col col-25 item item-divider">
+                Język
+            </div>
+            <div class="col col-25 item item-divider">
+                Gwiazdy
+            </div>
+        </div>
+        <div class="row" ng-repeat="rep in repos | orderBy:sortOrder">
+            <a class="col col-50 item" href="#/app/listaGit/{{rep.name}}" title={{rep.name}}>
+                {{rep.name}}            
+            </a>
+            <a class="col col-25 item" title="Szczegóły">
+                {{rep.language}}
+            </a>            
+            <a class="col col-25 item" title="Szczegóły">
+                <i class="icon-left ion-ios-star-outline"></i>{{rep.stargazers_count | number}}
+            </a>
+        </div>
+
+        <div ng-repeat="rep in userr">
+            <a class="item item-avatar" ng-hide="repos" ng-click="search(rep.login)">
+                <img ng-src="{{rep.avatar_url}}">
+                <h2>{{rep.login}}</h2>
+                <p>{{rep.html_url}}</p>
+            </a>
+        </div>
+
 </ion-content>
 </ion-view>

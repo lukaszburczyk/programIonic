@@ -9,6 +9,10 @@
       <Configuration>Debug</Configuration>
       <Platform>iOS</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Windows Phone">
+      <Configuration>Debug</Configuration>
+      <Platform>Windows Phone</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Debug|Windows-AnyCPU">
       <Configuration>Debug</Configuration>
       <Platform>Windows-AnyCPU</Platform>
@@ -40,6 +44,10 @@
     <ProjectConfiguration Include="Release|iOS">
       <Configuration>Release</Configuration>
       <Platform>iOS</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Windows Phone">
+      <Configuration>Release</Configuration>
+      <Platform>Windows Phone</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="Release|Windows-AnyCPU">
       <Configuration>Release</Configuration>

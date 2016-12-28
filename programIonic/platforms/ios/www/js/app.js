@@ -40,14 +40,32 @@ angular.module('starter', ['ionic', 'starter.controllers'])
                   }
               }
           })
+          .state('app.email', {
+              url: '/email',
+              views: {
+                  'menuContent': {
+                      templateUrl: 'templates/email.html'
+                  }
+              }
+          })
           .state('app.listaGit', {
               url: '/listaGit',
               views: {
                   'menuContent': {
-                      templateUrl: 'templates/listaGit.html'
+                      templateUrl: 'templates/listaGit.html',
+                      controller: 'listaGit'
                   }
               }
           })
+                  .state('app.listaGitSz', {
+                      url: '/listaGit/:name',
+                      views: {
+                          'menuContent': {
+                              templateUrl: 'templates/listaGitSz.html',
+                              controller: 'szczeP'
+                          }
+                      }
+                  })
   .state('app.lista', {
       url: '/lista',
       views: {

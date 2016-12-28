@@ -10,9 +10,6 @@
         "cordova-plugin-console": {
             "PACKAGE_NAME": "io.cordova.myapp8316f1"
         },
-        "cordova-plugin-device": {
-            "PACKAGE_NAME": "io.cordova.myapp8316f1"
-        },
         "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "io.cordova.myapp8316f1"
         },
@@ -23,6 +20,9 @@
             "PACKAGE_NAME": "io.cordova.myapp8316f1"
         },
         "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "io.cordova.myapp8316f1"
+        },
+        "cordova-plugin-device": {
             "PACKAGE_NAME": "io.cordova.myapp8316f1"
         }
     },
