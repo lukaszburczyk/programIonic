@@ -1,0 +1,37 @@
+﻿<ion-view view-title="Dane użytkowników">
+    <ion-content ng-controller="lista" ng-init="start()">
+        <label class="item item-input item-select">
+            <a class="input-label">
+                Wybierz rodzaj sortowania
+            </a>
+            <select ng-model="sortOrder">
+                <option value="+imie_nazwisko.split(' ')[1]">Imie</option>
+                <option value="+imie_nazwisko.split(' ')[0]">Nazwisko</option>
+                <option value="+mobile">Nr. Telefonu</option>
+            </select>
+        </label>
+
+        <div class="row ">
+            <div class="col col-30 item item-divider">
+                Imie
+            </div>
+            <div class="col col-30 item item-divider">
+                Nazwisko
+            </div>
+            <div class="col col-40 item item-divider">
+                Telefon
+            </div>
+        </div>
+        <div class="row" ng-repeat="user in user | orderBy:sortOrder">
+            <div class="col col-30 item" ng-click="showPopup(user)" ng-show="isEmpty(user.imie_nazwisko.split(' ')[1])">
+                {{user.imie_nazwisko.split(' ')[1]}}
+            </div>
+            <div class="col col-30 item" ng-click="showPopup(user)" ng-show="isEmpty(user.imie_nazwisko.split(' ')[0])">
+                {{user.imie_nazwisko.split(' ')[0]}}
+            </div>
+            <div class="col col-40 item" ng-click="showPopup(user)" ng-show="isEmpty(user.mobile)">
+                {{user.mobile}}
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
