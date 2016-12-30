@@ -31,16 +31,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         abstract: true,
         templateUrl: 'templates/menu.html'
     })
-
-          .state('app.lista1', {
-              url: '/lista1',
-              views: {
-                  'lista1': {
-                      templateUrl: 'templates/lista1.html',
-                      controller: 'lista'
-                  }
-              }
-          })
+    .state('app.lista1', {
+        url: '/lista1',
+        views: {
+            'lista1': {
+                templateUrl: 'templates/lista1.html',
+                controller: 'lista'
+            }
+        }
+    })
     .state('app.lista2', {
         url: '/lista2',
         views: {
