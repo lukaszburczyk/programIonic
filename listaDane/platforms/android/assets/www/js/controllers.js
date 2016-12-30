@@ -14,7 +14,10 @@
     }
 
     var onError = function (reason) {
-        $scope.error = "Nie można pobrać informacji"
+        $scope.error = $ionicPopup.alert({
+            title: 'Nie można załadować danych!',
+            template: 'Spróbuj ponownie uruchomić aplikację.'
+        })
     }
 
     $scope.showPopup = function (user) {
