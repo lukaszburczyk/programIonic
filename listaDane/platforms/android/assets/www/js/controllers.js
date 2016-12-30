@@ -32,11 +32,11 @@
     +       '<i class="icon ion-person"></i>'
     +       user.rola
     +   '</a>'
-    + '<a class="item item-icon-left" href="mailto:'+user.email+'">'
+    +   '<a class="item item-icon-left" href="mailto:'+user.email+'">'
     +       '<i class="icon ion-email"></i>'
     +       user.email
     +   '</a>'
-    + '<a class="item item-icon-left item-icon-right" href="tel:'+user.mobile+'">'
+    +   '<a class="item item-icon-left item-icon-right" href="tel:'+user.mobile+'">'
     +       '<i class="icon ion-chatbubble-working"></i>'
     +       user.mobile
     +       '<i class="icon ion-ios-telephone-outline"></i>'
